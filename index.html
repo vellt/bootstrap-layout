@@ -75,70 +75,50 @@
       border: 2px solid goldenrod;
     }
 
-    .test2 {
-      background-color: salmon;
-      color: white;
-      font-size: 18px;
-      padding: 20px;
-      border: 2px solid white;
-    }
 
-    .solution2>*>* {
-      background-color: cadetblue;
-      color: white;
-      font-size: 18px;
-      padding: 20px;
-      border: 2px solid white;
-    }
 
-    .test3 {
-      background-color: royalblue;
-      color: white;
-      font-size: 18px;
-      padding: 20px;
-      border: 2px solid white;
-    }
-
-    .solution3>*>* {
-      background-color: darkslategrey;
-      color: white;
-      font-size: 18px;
-      padding: 20px;
-      border: 2px solid white;
-    }
+    
   </style>
 </head>
 
 <body>
-  <h1>Bootstrap Layout Exercise</h1>
+  <h1 class="fw-bold ">Bootstrap Elrendezési Gyakorlat</h1>
 
   <div class="flex-container">
-    <h2>Exercise 1</h2>
+    <p class="container test-parent text-center">Módosítsd a HTML kódját a lila dobozoknak, hogy úgy viselkedjenek, mint a zöldek.</p>
+  </div>
+
+  <hr/>
+
+  <div class="flex-container">
+    <h2>Gyakorlat 1</h2>
+    <div class="container parent d-flex justify-content-center">
+      <!-- Itt adjuk meg a képet img-fluid osztállyal, hogy responsive legyen -->
+      <img src="Névtelen terv.gif33.gif" alt="Responsive image" class="img-fluid">
+    </div>
     <div class="container parent">
       <div class="row">
-        <div class="col-xl-6 child">50% desktop, 100% mobile</div>
-        <div class="col-xl-6 child">50% desktop, 100% mobile</div>
+        <div class="col-xl-6 child ">50% asztali gépen, 100% mobilon</div>
+        <div class="col-xl-6 child ">50% asztali gépen, 100% mobilon</div>
       </div>
     </div>
-    <div class="container test-parent" id="test1">
+    <div class="container test-parent " id="test1">
       <div class="row">
-        <div class="">50% desktop, 100% mobile</div>
-        <div class="">50% desktop, 100% mobile</div>
+        <div class="">50% asztali gépen, 100% mobilon</div>
+        <div class="">50% asztali gépen, 100% mobilon</div>
       </div>
     </div>
-    <div class="container">
-      <textarea id="test-1-code" placeholder="Write your CSS code here..." rows="5">
-<!-- Modify the HTML code for the purple boxes below so it behaves like the green ones. -->
-  <div class="row">
-    <div class="">50% desktop, 100% mobile</div>
-    <div class="">50% desktop, 100% mobile</div>
-  </div>
-  
-    </textarea>
+    <div class="container test-parent">
+      <textarea id="test-1-code" rows="5">
+<div class="row">
+  <div class="">50% asztali gépen, 100% mobilon</div>
+  <div class="">50% asztali gépen, 100% mobilon</div>
+</div>
+      </textarea>
     </div>
-
-    <button onclick="applyTest1()">Apply Changes</button>
-
+  
+    <button onclick="applyTest1()">Változtatások alkalmazása</button>
+  
     <script>
       function applyTest1() {
         const userCss = document.getElementById('test-1-code').value;
@@ -147,36 +127,36 @@
       }
     </script>
   </div>
+  
+  <hr/>
 
   <div class="flex-container">
-    <h2>Exercise 2</h2>
+    <h2>Gyakorlat 2</h2>
     <div class="container parent">
       <div class="row">
-        <div class="col-lg-6 col-sm-12 col-10 child test2">Column 1</div>
-        <div class="col-lg-3 col-sm-6 col-10 child test2">Column 2</div>
-        <div class="col-lg-3 col-sm-6 col-10 child test2">Column 3</div>
+        <div class="col-lg-6 col-sm-12 col-10 child ">Oszlop 1</div>
+        <div class="col-lg-3 col-sm-6 col-10 child ">Oszlop 2</div>
+        <div class="col-lg-3 col-sm-6 col-10 child ">Oszlop 3</div>
       </div>
     </div>
-    <div class="container test-parent  solution2" id="test2">
+    <div class="container test-parent " id="test2">
       <div class="row">
-        <div class="">Column 1</div>
-        <div class="">Column 2</div>
-        <div class="">Column 3</div>
+        <div class="">Oszlop 1</div>
+        <div class="">Oszlop 2</div>
+        <div class="">Oszlop 3</div>
       </div>
     </div>
-    <div class="container">
+    <div class="container  test-parent">
       <textarea id="test-2-code" rows="5">
-  <!-- Modify the HTML below to make the blue boxes behave like the red ones. -->
-  <div class="row">
-    <div class="">Column 1</div>
-    <div class="">Column 2</div>
-    <div class="">Column 3</div>
-  </div>
-      
-        </textarea>
+<div class="row">
+  <div class="">Oszlop 1</div>
+  <div class="">Oszlop 2</div>
+  <div class="">Oszlop 3</div>
+</div>
+      </textarea>
     </div>
 
-    <button onclick="applyTest2()">Apply Changes</button>
+    <button onclick="applyTest2()">Változtatások alkalmazása</button>
 
     <script>
       function applyTest2() {
@@ -186,32 +166,43 @@
       }
     </script>
   </div>
+
+  <hr/>
+
   <div class="flex-container">
-    <h2>Exercise 3</h2>
+    <h2>Gyakorlat 3</h2>
+    <div class="container parent d-flex justify-content-center">
+      <!-- Itt adjuk meg a képet img-fluid osztállyal, hogy responsive legyen -->
+      <img src="Névtelen terv (12).gif" alt="Responsive image" class="img-fluid">
+    </div>
     <div class="container parent">
       <div class="row">
-        <div class="col-xxl-1 col-xl-2 col-lg-4 col-md-6 col-sm-12 child test3">Column 1</div>
-        <div class="col-xxl-11 col-xl-10 col-lg-8 col-md-6 col-sm-12 child test3">Column 2</div>
+        <div class="col-lg-3 col-sm-6 child ">Practice</div>
+        <div class="col-lg-3 col-sm-6 child ">kAI</div>
+        <div class="col-lg-3 col-sm-6 child ">Build</div>
+        <div class="col-lg-3 col-sm-6 child ">Host</div>
       </div>
     </div>
-    <div class="container test-parent  solution3" id="test3">
+    <div class="container test-parent" id="test3">
       <div class="row">
-        <div class="">Column 1</div>
-        <div class="">Column 2</div>
+        <div class="">Practice</div>
+        <div class="">kAI</div>
+        <div class="">Build</div>
+        <div class="">Host</div>
       </div>
     </div>
-    <div class="container">
+    <div class="container test-parent">
       <textarea id="test-3-code" rows="5">
-      <!-- Modify the HTML below to make the indigo boxes behave like the blue ones. -->
-      <div class="row">
-        <div class="">Column 1</div>
-        <div class="">Column 2</div>
-      </div>
-          
-            </textarea>
+<div class="row">
+  <div class="">Practice</div>
+  <div class="">kAI</div>
+  <div class="">Build</div>
+  <div class="">Host</div>
+</div>
+      </textarea>
     </div>
 
-    <button onclick="applyTest3()">Apply Changes</button>
+    <button onclick="applyTest3()">Változtatások alkalmazása</button>
 
     <script>
       function applyTest3() {
@@ -221,6 +212,239 @@
       }
     </script>
   </div>
+
+  <hr/>
+
+  <div class="flex-container">
+    <h2>Gyakorlat 4</h2>
+    <div class="container parent">
+      <div class="row">
+        <div class="col-xxl-1 col-xl-2 col-lg-4 col-md-6 col-sm-12 child ">Oszlop 1</div>
+        <div class="col-xxl-11 col-xl-10 col-lg-8 col-md-6 col-sm-12 child ">Oszlop 2</div>
+      </div>
+    </div>
+    <div class="container test-parent" id="test4">
+      <div class="row">
+        <div class="">Oszlop 1</div>
+        <div class="">Oszlop 2</div>
+      </div>
+    </div>
+    <div class="container test-parent">
+      <textarea id="test-4-code" rows="5">
+<div class="row">
+  <div class="">Oszlop 1</div>
+  <div class="">Oszlop 2</div>
+</div>
+      </textarea>
+    </div>
+
+    <button onclick="applyTest4()">Változtatások alkalmazása</button>
+
+    <script>
+      function applyTest4() {
+        const userCss = document.getElementById('test-4-code').value;
+        const test1 = document.getElementById('test4');
+        test1.innerHTML = userCss;
+      }
+    </script>
+  </div>
+
+  <hr/>
+
+  <div class="flex-container">
+    <h2>Gyakorlat 5</h2>
+    <div class="container parent">
+      <div class="row">
+        <div class="col-md-8 col-sm-12 child ">Nagy oszlop</div>
+        <div class="col-md-4 col-sm-12 child ">Kis oszlop</div>
+      </div>
+    </div>
+    <div class="container test-parent" id="test5">
+      <div class="row">
+        <div class="">Nagy oszlop</div>
+        <div class="">Kis oszlop</div>
+      </div>
+    </div>
+    <div class="container test-parent">
+      <textarea id="test-5-code" rows="5">
+<div class="row">
+  <div class="">Nagy oszlop</div>
+  <div class="">Kis oszlop</div>
+</div>
+      </textarea>
+    </div>
+    <button onclick="applyTest5()">Változtatások alkalmazása</button>
+    <script>
+      function applyTest5() {
+        const userHtml = document.getElementById('test-5-code').value;
+        document.getElementById('test5').innerHTML = userHtml;
+      }
+    </script>
+  </div>
+
+  
+  <hr/>
+  
+
+  <div class="flex-container">
+    <h2>Gyakorlat 6</h2>
+    <div class="container parent">
+      <div class="row">
+        <div class="col-sm-12 col-md-8 col-lg-6 child ">Változó oszlop</div>
+      </div>
+    </div>
+    <div class="container test-parent " id="test6">
+      <div class="row">
+        <div class="">Változó oszlop</div>
+      </div>
+    </div>
+    <div class="container test-parent">
+    <textarea id="test-6-code" rows="5" >
+<div class="row">
+  <div class="">Változó oszlop</div>
+</div>
+    </textarea>
+    </div>
+    <button onclick="applyTest6()">Változtatások alkalmazása</button>
+    <script>
+      function applyTest6() {
+        const userHtml = document.getElementById('test-6-code').value;
+        document.getElementById('test6').innerHTML = userHtml;
+      }
+    </script>
+  </div>
+
+  <hr/>
+
+  <div class="flex-container">
+    <h2>Gyakorlat 7</h2>
+    <div class="container parent d-flex justify-content-center">
+      <!-- Itt adjuk meg a képet img-fluid osztállyal, hogy responsive legyen -->
+      <img src="Névtelen terv (11).gif" alt="Responsive image" class="img-fluid">
+    </div>
+    <div class="container parent">
+      <div class="row">
+        <div class="col-12 child ">Everything you need to do your best work.</div>
+        <div class="col-6 col-md-3 child ">Docs</div>
+        <div class="col-6 col-md-3 child ">Wiki</div>
+        <div class="col-6 col-md-3 child ">Projects</div>
+        <div class="col-6 col-md-3 child ">Notion AI</div>
+        <div class="col-6 col-md-3 child ">Calendar</div>
+        <div class="col-6 col-md-3 child ">Goals</div>
+        <div class="col-6 col-md-3 child ">Sites</div>
+        <div class="col-6 col-md-3 child ">Templates</div>
+      </div>
+    </div>
+    <div class="container test-parent " id="test7">
+      <div class="row">
+        <div class="">Everything you need to do your best work.</div>
+        <div class="">Docs</div>
+        <div class="">Wiki</div>
+        <div class="">Projects</div>
+        <div class="">Notion AI</div>
+        <div class="">Calendar</div>
+        <div class="">Goals</div>
+        <div class="">Sites</div>
+        <div class="">Templates</div>
+      </div>
+    </div>
+    <div class="container test-parent">
+    <textarea id="test-7-code" rows="5" >
+<div class="row">
+  <div class="">Everything you need to do your best work.</div>
+  <div class="">Docs</div>
+  <div class="">Wiki</div>
+  <div class="">Projects</div>
+  <div class="">Notion AI</div>
+  <div class="">Calendar</div>
+  <div class="">Goals</div>
+  <div class="">Sites</div>
+  <div class="">Templates</div>
+</div>
+    </textarea>
+    </div>
+    <button onclick="applyTest7()">Változtatások alkalmazása</button>
+    <script>
+      function applyTest7() {
+        const userHtml = document.getElementById('test-7-code').value;
+        document.getElementById('test7').innerHTML = userHtml;
+      }
+    </script>
+  </div>
+
+  <hr/>
+
+  <div class="flex-container">
+    <h2>Gyakorlat 8</h2>
+    <div class="container parent d-flex justify-content-center">
+      <!-- Itt adjuk meg a képet img-fluid osztállyal, hogy responsive legyen -->
+      <img src="Névtelen terv (13).gif" alt="Responsive image" class="img-fluid">
+    </div>
+    <div class="container parent">
+      <div class="row">
+        <div class="col-12 col-md-6 d-none d-md-block child ">Kis képernyőn rejtett, közepes és nagyobb képernyőn látható</div>
+        <div class="col-12 col-md-6 d-block child ">Mindig látható</div>
+        
+      </div>
+    </div>
+    <div class="container test-parent" id="test8">
+      <div class="row">
+        <div class="">Kis képernyőn rejtett, közepes és nagyobb képernyőn látható</div>
+        <div class="">Mindig látható</div>
+      </div>
+    </div>
+    <div class="container test-parent">
+      <textarea id="test-8-code" rows="5" >
+<div class="row">
+  <div class="">Kis képernyőn rejtett, közepes és nagyobb képernyőn látható</div>
+  <div class="">Mindig látható</div>
+</div>
+      </textarea>
+    </div>
+    <button onclick="applyTest8()">Változtatások alkalmazása</button>
+    <script>
+      function applyTest8() {
+        const userHtml = document.getElementById('test-8-code').value;
+        document.getElementById('test8').innerHTML = userHtml;
+      }
+    </script>
+  </div>
+
+  <hr/>
+  
+  <div class="flex-container">
+    <h2>Gyakorlat 9</h2>
+    <div class="container parent">
+      <div class="row">
+        <div class="col d-block d-md-none child ">Csak mobil nézetben látható tartalom</div>
+        <div class="col d-none d-md-block child ">Csak asztali nézetben látható tartalom</div>
+      </div>
+    </div>
+    <div class="container test-parent solution2" id="test9">
+      <div class="row">
+        <div class="">Csak mobil nézetben látható tartalom</div>
+        <div class="">Csak asztali nézetben látható tartalom</div>
+      </div>
+    </div>
+    <div class="container test-parent">
+      <textarea id="test-9-code" rows="5" >
+<div class="row">
+  <div class="">Csak mobil nézetben látható tartalom</div>
+  <div class="">Csak asztali nézetben látható tartalom</div>
+</div>
+      </textarea>
+    </div>
+    <button onclick="applyTest9()">Változtatások alkalmazása</button>
+    <script>
+      function applyTest9() {
+        const userHtml = document.getElementById('test-9-code').value;
+        document.getElementById('test9').innerHTML = userHtml;
+      }
+    </script>
+  </div>
+  
+  
+  
 </body>
 
 </html>
